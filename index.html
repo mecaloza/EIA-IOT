@@ -108,7 +108,7 @@
           <p>Existen diferentes opciones instalables.</p>
           <ul>
             <li> 		
-							<a href="#/2/3">Mosquitto</a>
+							<a href="#/5">Mosquitto</a>
 						</p></li>
             <li>Hive MQ</li>
             <li>Adafruit IO</li>
@@ -136,7 +136,12 @@
 						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 							cd "Program files"
 							cd mosquitto
-
+							mosquitto -c mosquitto.conf
+							//sub
+							mosquitto_sub -h "hostname" -t "topic" 
+							//pub
+							mosquitto_pub -h "hostname" -t "topic" -m "menssage"
+							
 						</code></pre>
 						<!-- <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p> -->
 				

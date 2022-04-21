@@ -1,40 +1,229 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>EIA IOT</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <a href="https://revealjs.com">
+            <img
+              src="https://mqtt.org/assets/img/mqtt-logo-transp.svg"
+              alt="reveal.js logo"
+              style="
+                height: 180px;
+                margin: 0 auto 4rem auto;
+                background: transparent;
+              "
+              class="demo-logo"
+            />
+          </a>
+          <h3>MQTT broker(Mosquitto)</h3>
+          <p>
+            <small
+              >Created by
+              <a href="https://github.com/mecaloza">Esteban Lozada</a>
+            </small>
+          </p>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        <section>
+          <h2>PUB/SUB</h2>
+          <!-- <iframe
+            src="https://mecacroker.cloud.shiftr.io/embed?widgets=1"
+            width="100%"
+            height="400"
+            frameborder="0"
+            allowfullscreen
+          ></iframe> -->
+          <p>
+            Es un patrón de mensajería que consta de un publicador y un
+            suscriptor
+          </p>
+          <img
+            src="https://cloud.google.com/solutions/images/event-driven-architecture-pubsub-1-comparison-overview.svg"
+            alt="reveal.js logo"
+            style="
+              height: auto;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            "
+            class="demo-logo"
+          />
+        </section>
+        <section>
+          <h2>MQTT</h2>
+          <!-- <iframe
+            src="https://mecacroker.cloud.shiftr.io/embed?widgets=1"
+            width="100%"
+            height="400"
+            frameborder="0"
+            allowfullscreen
+          ></iframe> -->
+          <p>
+            Protocolo pub/sub que corre bajo TCP/IP, es diseñado específicamente
+            para conexiones limitadas por BW o energía disponible(eficiencia)
+          </p>
+          <iframe
+            src="https://smart.cloud.shiftr.io/embed?widgets=1"
+            width="1200"
+            height="400"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </section>
+        <section>
+          <h2>Componentes de MQTT</h2>
+          <!-- <iframe
+            src="https://mecacroker.cloud.shiftr.io/embed?widgets=1"
+            width="100%"
+            height="400"
+            frameborder="0"
+            allowfullscreen
+          ></iframe> -->
+          <ul>
+            <li>Cliente</li>
+            <li>Broker</li>
+            <li>Publicador/Suscriptor</li>
+            <li>Temas(topics)</li>
+          </ul>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <h2>Implementación</h2>
+          <p>Existen diferentes opciones instalables.</p>
+          <ul>
+            <li> 		
+							<a href="#/2/3">Mosquitto</a>
+						</p></li>
+            <li>Hive MQ</li>
+            <li>Adafruit IO</li>
+            <li>Mqttools</li>
+          </ul>
+          <p>
+            <a
+              href="https://en.wikipedia.org/wiki/Comparison_of_MQTT_implementations"
+              >Listado de algunas implementaciones</a
+            >
+          </p>
+        </section>
+
+				<section data-auto-animate>
+          <h2>Mosquitto 🔥</h2>
+					
+          <p>Es una entidad de tipo broker que implementá el protocolo MQTT en sus versiones 5.0 3.1.1 y 3.1</p>
+
+
+				
+						<a href="https://mosquitto.org/download/">Descarga Mosquitto</a>
+					</p>
+      
+			
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							cd "Program files"
+							cd mosquitto
+
+						</code></pre>
+						<!-- <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p> -->
+				
+        </section>
+
+        <section>
+          <h2>bibliografía</h2>
+          <!-- <iframe
+            src="https://mecacroker.cloud.shiftr.io/embed?widgets=1"
+            width="100%"
+            height="400"
+            frameborder="0"
+            allowfullscreen
+          ></iframe> -->
+          <ul>
+            <li> 		
+							<a href="https://mosquitto.org/">https://mosquitto.org/</a>
+						</p></li>
+						<li> 		
+							<a href="https://mqtt.org/assets/img/mqtt-logo-transp.svg">https://mqtt.org</a>
+						</p></li>
+						<li> 		
+							<a href="https://cloud.google.com/solutions/">https://cloud.google.com/solutions/</a>
+						</p></li>
+          </ul>
+        </section>
+
+        <!-- Example of nested vertical slides --       <!-- <section>
+          <section>
+            <h2>Vertical Slides</h2>
+            <p>Slides can be nested inside of each other.</p>
+            <p>Use the <em>Space</em> key to navigate through all slides.</p>
+            <br />
+            <a href="#/2/1" class="navigate-down">
+              <img
+                class="r-frame"
+                style="background: rgba(255, 255, 255, 0.1)"
+                width="178"
+                height="238"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Down arrow"
+              />
+            </a>
+          </section>
+          <section>
+            <h2>Basement Level 1</h2>
+            <p>
+              Nested slides are useful for adding additional detail underneath a
+              high level horizontal slide.
+            </p>
+          </section>
+          <section>
+            <h2>Basement Level 2</h2>
+            <p>That's it, time to go back up.</p>
+            <br />
+            <a href="#/2">
+              <img
+                class="r-frame"
+                style="
+                  background: rgba(255, 255, 255, 0.1);
+                  transform: rotate(180deg);
+                "
+                width="178"
+                height="238"
+                data-src="https://static.slid.es/reveal/arrow.png"
+                alt="Up arrow"
+              />
+            </a>
+          </section>
+        </section> -->
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>

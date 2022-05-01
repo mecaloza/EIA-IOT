@@ -1,139 +1,325 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <title>EIA IOT</title>
+  <title>EIA IOT</title>
 
-    <link rel="stylesheet" href="dist/reset.css" />
-    <link rel="stylesheet" href="dist/reveal.css" />
-    <link rel="stylesheet" href="dist/theme/black.css" />
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/black.css" />
 
-    <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section>
-          <a href="https://revealjs.com">
-            <img
-              src="https://mqtt.org/assets/img/mqtt-logo-transp.svg"
-              alt="reveal.js logo"
-              style="
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <a href="https://revealjs.com">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/LogoUniversidadEIA.png" alt="reveal.js logo"
+            style="
                 height: 180px;
                 margin: 0 auto 4rem auto;
                 background: transparent;
-              "
-              class="demo-logo"
-            />
-          </a>
-          <h3>MQTT broker(Mosquitto)</h3>
-          <p>
-            <small
-              >Created by
-              <a href="https://github.com/mecaloza">Esteban Lozada</a>
-            </small>
-          </p>
-        </section>
+              " class="demo-logo" />
+        </a>
+        <h3>CLASE 1</h3>
+        <h4>Herramientas para el desarrollo web </h4>
+        <p>
+          <small>Created by
+            <a href="https://github.com/mecaloza">Esteban Lozada</a>
+          </small>
+        </p>
+      </section>
 
-        <section>
-          <h2>PUB/SUB</h2>
-          <!-- <iframe
+      <section>
+        <h2>Esteba Lozada Giraldo</h2>
+        <!-- <iframe
             src="https://mecacroker.cloud.shiftr.io/embed?widgets=1"
             width="100%"
             height="400"
             frameborder="0"
             allowfullscreen
           ></iframe> -->
-          <p>
-            Es un patrón de mensajería que consta de un publicador y un
-            suscriptor
-          </p>
+        <p>
+          Ingeniero mecatrónico de la EIA  - Maestría en sistemas embebidos y redes IOT de TU-Berlín
+        </p>
+        <div class="container_colum">
+          <div class="container_ima">
+            <img src="https://comunidades.com.co/assets/img/logo_bellpi.png" alt="reveal.js logo" style="
+              height: 120px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+            <img
+              src="data:image/png;base64,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"
+              alt="reveal.js logo" style="
+            height: auto;
+            margin: 0 auto 4rem auto;
+            background: transparent;
+          " class="demo-logo" />
+          </div>
+          <div class="container_ima">
+
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHAAAABwCAMAAADxPgR5AAAAM1BMVEX///8AAADv7+9AQEB/f3+/v78QEBBgYGAwMDDPz88gICCfn5/f39+Pj49wcHBQUFCvr69x2J7iAAAESUlEQVRoge1a25LbIAw197vJ/39tJXGpk+zGzJplplPrpfUGcyRxJITwtt1yy38gfC2c84wJtxAQ8BjT66xUjEStBpSrAcUywK0AsnWLKGb61El5yoZUAP0MvB1nCieDOJtmohpT3RRAHS8DyjE6ODaLqHIwpquJp84/lUqHdDYu6kmrWGPajGp2nTbDa1Ni8TprfEE8H8gzsPTyEm5bLoAjm12csl1Umj5mzDUkj9VbT1y+9ZQA0+sAxeq9bl9dsITVFhbW7MvwIDA88+ui4pZbbrnllv9N+LpdmyTMqYyHRS0uTZwePAZNEm4XF7QVb5mF7UQ8dAqaibeIpR1vkUNDw7PX5lFqrPzeG56/VK4jz/UIBbo/h0Z/L3T2Hmg1dbyLSaa20+yJl1q8XyeoYiOIzne8017SmegBxNThJgREn8x/x4UoZuId2fe1t5Kei9d7RLgFvJM1/F29acfXAwOZefIrT0e4iQnUHGa1rRWukjiiMT2za2XYs3jPXsXO3ZCCfkN4ln12u8PZT3D+N2qm9K2RWv5ON4fLLyF/C44g05tjbfjlXlVMuTPUmnC91z0kToEswrrllltu+Zfly2aLkjWDxtdL/ngxtfL9q7LBtaMf9y93mfvFm79aGeaXP5t2tY/l+NN4dvHmDxQW0r61BkSrdeVLXwSPPD8qa4J81PehaOf6VevcbpfloerlnF740QcZuHCIKMohQRBghILXpopTT++q34JhqW+5KqYHcIqvJY4zluWTWpWuYSX+W+a18MD7ZbCSyjItRIpJgalCwEgOTobKynDyaB2KB7t6ojr5Xsozi0YBBUkznIXYs8NMsn124XtNLIlbkhtwJwFqJjg8gXuw4eZDPlnYACSR4JpcT11gMPoKewQW5xXZko+lyLlwZmda4eQCvK/wY4OyHgkXG+xUJw0pD0CC+dyGoebR43droaqaGosUAUYcicYEQFDkIXRhRF0xhs3nDw8e+CK5vjJDV0sjHmX4X5zibdIobw9NjJaoSno60ihx0lM0qC8Bpubh1ODqbbfqt94YHxjttnZ/CRCnaL1gJdhZMqBsRcNie1Z0bNK6AbruI/wtHAr9ajsqZ+p/iG4f8CJrgKIZCH4MuPqyuXTrLLDgfnlIt83ZSOFEGcJg6/STSx8EaHrnChWkbM0xU9fE0nmO4ZOry1xCQtaFd+gNiXgPjNAPcSgJkEvp2ougn8FGXWZ6r7o+Ae5lvogZECJg22n9QOWoSyga/6lNZJ43ANqeYB0D/iBjReqNJgs/pgJo8Y8IKMjhsAgYwJgTlPzUWBTPgPjoYLIsKIYF9QxS451D80GL7JCNMCvohz6yCCTgh12jvpD+vz/6v0SNoN2QsiO+gx7G9ytgGVwbsrDosREAh8fCdbO9b2NHccIczVflcfe28D6IHVfLl5DRpUmCSVybSJcVOP8ji4zryCH1FZbtYvG10C23XJQ/VJcZm8ZEAwoAAAAASUVORK5CYII="
+              alt="reveal.js logo" style="
+              height: auto;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+            <img src="https://tiendacasatoro.com/wp-content/uploads/2020/07/logo-ct@3x_blanco.png" alt="reveal.js logo"
+              style="
+
+              height: auto;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+          </div>
+        </div>
+
+
+
+      </section>
+
+
+      <section>
+        <h2>Objetivo del curso</h2>
+
+        <p>
+          Desarrollar competencias en la programación de aplicaciones y páginas web
+          enfocadas
+          en el uso de
+          tecnologías
+          de IOT, conexión a bases de datos(SQL - NoSQL) y puesta en producción
+          en la nube; utilizando buenas prácticas de
+          programación, herramientas adecuadas y frameworks populares que permitan la construcción de soluciones IOT
+        </p>
+
+      </section>
+
+      <section>
+        <h2>Herramientas de trabajo</h2>
+        <div class="container_colum">
+          <div class="container_ima">
+            <img
+              src="https://quesignificaelerror.com/wp-content/uploads/2021/03/%C2%BFQue-es-Git-Bash-y-como-instalarlo-en-Windows.jpg"
+              alt="reveal.js logo" style="
+              height: 120px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+            <img src="https://sobrebits.com/wp-content/uploads/2018/10/Visual-Studio-Code-para-PowerShell.png"
+              alt="reveal.js logo" style="
+            height: auto;
+            margin: 0 auto 4rem auto;
+            background: transparent;
+          " class="demo-logo" />
+
+          </div>
+          <div class="container_ima">
+
+            <img src="https://1000marcas.net/wp-content/uploads/2020/02/GitHub-logo-1.jpg" alt="reveal.js logo" style="
+              height:120px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+            <img src="https://mirayhazlo.com/wp-content/uploads/2019/07/node-logo.png" alt="reveal.js logo" style="
+
+              height: 130px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+          </div>
+          <div class="container_ima">
+
+            <img src="https://1000marcas.net/wp-content/uploads/2021/06/Django-Logo.png" alt="reveal.js logo" style="
+              height:120px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+            <img
+              src="data:image/png;base64,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"
+              alt="reveal.js logo" style="
+
+              height: 130px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+          </div>
+          <div class="container_ima">
+
+            <img
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--3zWuwYa3--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pdib9r9rk5j1m7oala1p.png"
+              alt="reveal.js logo" style="
+              height:120px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+            <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="reveal.js logo" style="
+
+              height: 130px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+          </div>
+          <div class="container_ima">
+
+            <img src="https://1000marcas.net/wp-content/uploads/2020/11/MySQL-logo.png" alt="reveal.js logo" style="
+              height:120px;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <section>
+          <!-- <h2>GIT</h2>
           <img
-            src="https://cloud.google.com/solutions/images/event-driven-architecture-pubsub-1-comparison-overview.svg"
-            alt="reveal.js logo"
+            src="https://quesignificaelerror.com/wp-content/uploads/2021/03/%C2%BFQue-es-Git-Bash-y-como-instalarlo-en-Windows.jpg"
+            alt="reveal.js logo" style="
+        height: 120px;
+        margin: 0 auto 4rem auto;
+        background: transparent;
+      " class="demo-logo" />
+
+          <p>
+            ¿Qué es un control de versiones?
+          </p>
+          <p>
+            Control de cambio de sistema, recuperación de versiones anteriores, manejo de proyectos en equipo
+          </p>
+          <p>
+            <a href="https://git-scm.com/downloads">Descargar git bash</a>
+          </p> -->
+
+
+          <section>
+            <section id="fragments">
+              <h2>GIT</h2>
+
+              <img
+                src="https://quesignificaelerror.com/wp-content/uploads/2021/03/%C2%BFQue-es-Git-Bash-y-como-instalarlo-en-Windows.jpg"
+                alt="reveal.js logo" style="
+        height: 120px;
+        margin: 0 auto 4rem auto;
+        background: transparent;
+      " class="demo-logo fragment" />
+              <p class="fragment">¿Qué es un control de versiones?</p>
+              <p> <span class="fragment"> Control de
+                  cambio de sistema, recuperación de versiones anteriores, manejo de proyectos en equipo</span> </p>
+              <p class="fragment">
+                <a href="https://git-scm.com/downloads">Descargar git bash</a>
+              </p>
+              <aside class="notes">
+                This slide has fragments which are also stepped through in the notes window.
+              </aside>
+            </section>
+
+          </section>
+
+        </section>
+        <section>
+          <h2>GIT </h2>
+          <p>
+            Conceptos básicos
+          </p>
+          <ul>
+            <li>repositorios</li>
+            <li>ramas(branch)</li>
+            <li> git add </li>
+            <li> git commit</li>
+            <li>git push</li>
+            <li>git pull</li>
+            <li>git checkout</li>
+
+          </ul>
+        </section>
+        <section>
+          <h2>GIT Flow </h2>
+          <p>
+            Modelo alternativo de creación de ramas
+          </p>
+
+          <img src="https://salesforcegraells.files.wordpress.com/2017/10/gitflow-workflow.jpg" alt="reveal.js logo"
             style="
               height: auto;
               margin: 0 auto 4rem auto;
               background: transparent;
-            "
-            class="demo-logo"
-          />
-        </section>
-        <section>
-          <h2>MQTT</h2>
-          <!-- <iframe
-            src="https://mecacroker.cloud.shiftr.io/embed?widgets=1"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowfullscreen
-          ></iframe> -->
-          <p>
-            Protocolo pub/sub que corre bajo TCP/IP, es diseñado específicamente
-            para conexiones limitadas por BW o energía disponible(eficiencia)
-          </p>
-          <iframe
-            src="https://smart.cloud.shiftr.io/embed?widgets=1"
-            width="1200"
-            height="400"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </section>
-        <section>
-          <h2>Componentes de MQTT</h2>
-          <!-- <iframe
-            src="https://mecacroker.cloud.shiftr.io/embed?widgets=1"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowfullscreen
-          ></iframe> -->
-          <ul>
-            <li>Cliente</li>
-            <li>Broker</li>
-            <li>Publicador/Suscriptor</li>
-            <li>Temas(topics)</li>
-          </ul>
-        </section>
+            " class="demo-logo" />
 
-        <section>
-          <h2>Implementación</h2>
-          <p>Existen diferentes opciones instalables.</p>
-          <ul>
-            <li> 		
-							<a href="#/5">Mosquitto</a>
-						</p></li>
-            <li>Hive MQ</li>
-            <li>Adafruit IO</li>
-            <li>Mqttools</li>
-          </ul>
-          <p>
-            <a
-              href="https://en.wikipedia.org/wiki/Comparison_of_MQTT_implementations"
-              >Listado de algunas implementaciones</a
-            >
-          </p>
         </section>
-
-				<section data-auto-animate>
-          <h2>Mosquitto 🔥</h2>
-					
-          <p>Es una entidad de tipo broker que implementá el protocolo MQTT en sus versiones 5.0 3.1.1 y 3.1</p>
+      </section>
 
 
-				
-						<a href="https://mosquitto.org/download/">Descarga Mosquitto</a>
-					</p>
-      
-			
-						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+      <section>
+        <h2>PUB/SUB</h2>
+        <p>
+          Es un patrón de mensajería que consta de un publicador y un
+          suscriptor
+        </p>
+        <img src="https://cloud.google.com/solutions/images/event-driven-architecture-pubsub-1-comparison-overview.svg"
+          alt="reveal.js logo" style="
+              height: auto;
+              margin: 0 auto 4rem auto;
+              background: transparent;
+            " class="demo-logo" />
+      </section>
+      <section>
+        <h2>MQTT</h2>
+        <p>
+          Protocolo pub/sub que corre bajo TCP/IP, es diseñado específicamente
+          para conexiones limitadas por BW o energía disponible(eficiencia)
+        </p>
+        <iframe src="https://smart.cloud.shiftr.io/embed?widgets=1" width="1200" height="400" frameborder="0"
+          allowfullscreen></iframe>
+      </section>
+      <section>
+        <h2>Componentes de MQTT</h2>
+        <ul>
+          <li>Cliente</li>
+          <li>Broker</li>
+          <li>Publicador/Suscriptor</li>
+          <li>Temas(topics)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Implementación</h2>
+        <p>Existen diferentes opciones instalables.</p>
+        <ul>
+          <li>
+            <a href="#/5">Mosquitto</a>
+            </p>
+          </li>
+          <li>Hive MQ</li>
+          <li>Adafruit IO</li>
+          <li>Mqttools</li>
+        </ul>
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Comparison_of_MQTT_implementations">Listado de algunas
+            implementaciones</a>
+        </p>
+      </section>
+
+      <section data-auto-animate>
+        <h2>Mosquitto 🔥</h2>
+
+        <p>Es una entidad de tipo broker que implementá el protocolo MQTT en sus versiones 5.0 3.1.1 y 3.1</p>
+
+
+
+        <a href="https://mosquitto.org/download/">Descarga Mosquitto</a>
+        </p>
+
+
+        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 							cd "Program files"
 							cd mosquitto
 							mosquitto -c mosquitto.conf
@@ -143,33 +329,35 @@
 							mosquitto_pub -h "hostname" -t "topic" -m "menssage"
 							
 						</code></pre>
-						<!-- <p>Code syntax highlighting courtesy of <a href="https://highlightjs.org/usage/">highlight.js</a>.</p> -->
-				
-        </section>
 
-        <section>
-          <h2>bibliografía</h2>
-          <!-- <iframe
-            src="https://mecacroker.cloud.shiftr.io/embed?widgets=1"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allowfullscreen
-          ></iframe> -->
-          <ul>
-            <li> 		
-							<a href="https://mosquitto.org/">https://mosquitto.org/</a>
-						</p></li>
-						<li> 		
-							<a href="https://mqtt.org/assets/img/mqtt-logo-transp.svg">https://mqtt.org</a>
-						</p></li>
-						<li> 		
-							<a href="https://cloud.google.com/solutions/">https://cloud.google.com/solutions/</a>
-						</p></li>
-          </ul>
-        </section>
 
-        <!-- Example of nested vertical slides --       <!-- <section>
+      </section>
+
+      <section>
+        <h2>bibliografía</h2>
+        <ul>
+          <li>
+            <a href="https://mosquitto.org/">https://mosquitto.org/</a>
+            </p>
+          </li>
+          <li>
+            <a href="https://mqtt.org/assets/img/mqtt-logo-transp.svg">https://mqtt.org</a>
+            </p>
+          </li>
+          <li>
+            <a href="https://cloud.google.com/solutions/">https://cloud.google.com/solutions/</a>
+            </p>
+          </li>
+          <li>
+            <a
+              href="  https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow#:~:text=Gitflow%20es%20un%20modelo%20alternativo,vez%20y%20quien%20lo%20populariz%C3%B3.">https://www.atlassian.com/es/git/</a>
+            </p>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Example of nested vertical slides --       <!-- <section>
           <section>
             <h2>Vertical Slides</h2>
             <p>Slides can be nested inside of each other.</p>
@@ -212,23 +400,23 @@
             </a>
           </section>
         </section> -->
-      </div>
     </div>
+  </div>
 
-    <script src="dist/reveal.js"></script>
-    <script src="plugin/notes/notes.js"></script>
-    <script src="plugin/markdown/markdown.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script>
-      // More info about initialization & config:
-      // - https://revealjs.com/initialization/
-      // - https://revealjs.com/config/
-      Reveal.initialize({
-        hash: true,
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
 
-        // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-      });
-    </script>
-  </body>
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+  </script>
+</body>
 </html>
